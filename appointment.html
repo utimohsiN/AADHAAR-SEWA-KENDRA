@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Book Appointment - Aadhaar Sewa Kendra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Aadhaar Sewa Kendra</h1>
+    <nav><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Book an Appointment</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <form class="appointment-form" action="https://formspree.io/f/yourFormID" method="POST">
+          <input class="form-field" type="text" name="name" placeholder="Full name" required>
+          <input class="form-field" type="text" name="phone" placeholder="Mobile number" required>
+          <label class="small">Choose date</label>
+          <input class="form-field" type="date" name="date" required>
+          <label class="small">Choose time</label>
+          <input class="form-field" type="time" name="time" required>
+          <textarea class="form-field" name="note" rows="3" placeholder="Additional notes (optional)"></textarea>
+          <button class="btn" type="submit">Book Appointment</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Visit / Call</h3>
+        <p class="small">📍 Shop No 01 & 02, Noor Nagar Sihani, Near PNB, Raj Nagar Extension, Ghaziabad</p>
+        <p class="small">📞 <a href="tel:+917861020303">+91 7861020303</a></p>
+        <p class="small">💬 <a href="https://wa.me/917861020303" target="_blank">Chat on WhatsApp</a></p>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="footer">© 2025 Aadhaar Sewa Kendra</footer>
+<a class="whatsapp-fab" href="https://wa.me/917861020303" target="_blank">💬 WhatsApp</a>
+<script src="site.js"></script>
+</body>
+</html>
