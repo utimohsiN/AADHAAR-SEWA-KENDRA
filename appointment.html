@@ -1,50 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Appointment - Aadhaar Sewa Kendra</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <h1>Aadhaar Sewa Kendra</h1>
-    <nav><a href="index.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="contact.html">Contact</a></nav>
-  </div>
-</header>
+  <header>
+    <h1>Book Your Appointment</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="appointment.html">Book Appointment</a>
+    </nav>
+  </header>
 
-<main class="container">
-  <section class="section">
-    <h2>Book an Appointment</h2>
+  <main>
+    <form action="thank-you.html" method="get" onsubmit="return validateForm()">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
 
-    <div class="card-grid">
-      <div class="card">
-        <form class="appointment-form" action="https://formspree.io/f/yourFormID" method="POST">
-          <input class="form-field" type="text" name="name" placeholder="Full name" required>
-          <input class="form-field" type="text" name="phone" placeholder="Mobile number" required>
-          <label class="small">Choose date</label>
-          <input class="form-field" type="date" name="date" required>
-          <label class="small">Choose time</label>
-          <input class="form-field" type="time" name="time" required>
-          <textarea class="form-field" name="note" rows="3" placeholder="Additional notes (optional)"></textarea>
-          <button class="btn" type="submit">Book Appointment</button>
-        </form>
-      </div>
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}">
 
-      <div class="card">
-        <h3>Visit / Call</h3>
-        <p class="small">📍 Shop No 01 & 02, Noor Nagar Sihani, Near PNB, Raj Nagar Extension, Ghaziabad</p>
-        <p class="small">📞 <a href="tel:+917861020303">+91 7861020303</a></p>
-        <p class="small">💬 <a href="https://wa.me/917861020303" target="_blank">Chat on WhatsApp</a></p>
-      </div>
-    </div>
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
 
-  </section>
-</main>
+      <label for="service">Service Required:</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select Service --</option>
+        <option>New Aadhaar Enrollment</option>
+        <option>Aadhaar Update</option>
+        <option>Aadhaar PVC Print</option>
+      </select>
 
-<footer class="footer">© 2025 Aadhaar Sewa Kendra</footer>
-<a class="whatsapp-fab" href="https://wa.me/917861020303" target="_blank">💬 WhatsApp</a>
-<script src="site.js"></script>
+      <button type="submit">Confirm Appointment</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Aadhaar Sewa Kendra</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
