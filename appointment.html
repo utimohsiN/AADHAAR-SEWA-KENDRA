@@ -12,36 +12,25 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="appointment.html">Book Appointment</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-
   <main>
-    <form action="thank-you.html" method="get" onsubmit="return validateForm()">
+    <form action="thank-you.html" method="get">
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" required>
-
-      <label for="mobile">Mobile Number:</label>
-      <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}">
 
       <label for="date">Preferred Date:</label>
       <input type="date" id="date" name="date" required>
 
-      <label for="service">Service Required:</label>
-      <select id="service" name="service" required>
-        <option value="">-- Select Service --</option>
-        <option>New Aadhaar Enrollment</option>
-        <option>Aadhaar Update</option>
-        <option>Aadhaar PVC Print</option>
-      </select>
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required>
 
-      <button type="submit">Confirm Appointment</button>
+      <button type="submit">Submit</button>
     </form>
   </main>
-
   <footer>
     <p>© 2025 Aadhaar Sewa Kendra</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
