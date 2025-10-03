@@ -1,36 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Appointment - Aadhaar Sewa Kendra</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aadhaar Sewa Kendra - Raj Nagar Extension, Ghaziabad</title>
+<meta name="description" content="Aadhaar Sewa Kendra - Raj Nagar Extension, Ghaziabad. Appointment booking, enrollment and updates. Contact us for fast Aadhaar services." />
+<meta name="keywords" content="Aadhaar, Aadhaar Sewa Kendra, Raj Nagar Extension, Ghaziabad, Enrollment, Update" />
+<link rel="canonical" href="https://utimohsin.github.io/AADHAAR-SEWA-KENDRA/" />
+<!-- Open Graph -->
+<meta property="og:title" content="Aadhaar Sewa Kendra - Raj Nagar Extension, Ghaziabad" />
+<meta property="og:description" content="Fast and reliable Aadhaar enrollment & update services. Book appointment online." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://utimohsin.github.io/AADHAAR-SEWA-KENDRA/" />
+<meta property="og:image" content="https://utimohsin.github.io/AADHAAR-SEWA-KENDRA/og-image.png" />
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="style.css" />
+
+<title>Book Appointment - Aadhaar Sewa Kendra</title>
 </head>
 <body>
-  <header>
-    <h1>Book Your Appointment</h1>
-    <nav>
+  <header class="site-header">
+    <h1>Book Appointment</h1>
+    <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="appointment.html">Book Appointment</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main>
-    <form action="thank-you.html" method="get">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required>
 
-      <label for="date">Preferred Date:</label>
-      <input type="date" id="date" name="date" required>
+  <main class="container">
+    <h2>Appointment Form</h2>
+    <form id="appointmentForm">
+      <label for="pname">Full Name</label>
+      <input id="pname" name="name" required />
 
-      <label for="time">Preferred Time:</label>
-      <input type="time" id="time" name="time" required>
+      <label for="phone">Phone (mobile)</label>
+      <input id="phone" name="phone" required pattern='\d10' />
 
-      <button type="submit">Submit</button>
+      <label for="service">Service</label>
+      <select id="service" name="service" required>
+        <option value="">Select</option>
+        <option>New Enrollment</option>
+        <option>Update Details</option>
+        <option>Biometric Update</option>
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input id="date" name="date" type="date" required />
+
+      <button type="submit" class="btn">Confirm Appointment</button>
     </form>
   </main>
-  <footer>
-    <p>© 2025 Aadhaar Sewa Kendra</p>
+
+  <footer class="site-footer">
+    <p>Address: Shop No. 01 & 02, Noor Nagar Sihani, Raj Nagar Extension, Ghaziabad</p>
   </footer>
+
+  <script src="script.js"></script>
+  <a class="whatsapp-float" href="https://wa.me/917861020303?text=I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <img src="whatsapp-icon.svg" alt="WhatsApp" />
+  </a>
 </body>
 </html>

@@ -1,30 +1,38 @@
-function validateForm() {
-  const name = document.getElementById("name").value.trim();
-  const mobile = document.getElementById("mobile").value.trim();
-
-  if (name === "" || mobile === "") {
-    alert("Please fill all required fields.");
-    return false;
+// Basic client-side handling: validation and simulated submission
+document.addEventListener('DOMContentLoaded', function(){
+  var contactForm = document.getElementById('contactForm');
+  if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      // In a real setup, you'd send this to a server or Netlify/Forms endpoint.
+      alert('Message sent — we will contact you soon.');
+      contactForm.reset();
+    });
   }
-  if (!/^\d{10}$/.test(mobile)) {
-    alert("Please enter a valid 10-digit mobile number.");
-    return false;
-  }
-  return true;
-}
 
-// WhatsApp floating button
-const whatsappBtn = document.createElement("a");
-whatsappBtn.href = "https://wa.me/917861020303";
-whatsappBtn.target = "_blank";
-whatsappBtn.innerText = "💬 Chat on WhatsApp";
-whatsappBtn.style.position = "fixed";
-whatsappBtn.style.bottom = "20px";
-whatsappBtn.style.right = "20px";
-whatsappBtn.style.background = "#25d366";
-whatsappBtn.style.color = "white";
-whatsappBtn.style.padding = "10px 15px";
-whatsappBtn.style.borderRadius = "30px";
-whatsappBtn.style.textDecoration = "none";
-whatsappBtn.style.boxShadow = "0 0 5px rgba(0,0,0,0.3)";
-document.body.appendChild(whatsappBtn);
+  var appointmentForm = document.getElementById('appointmentForm');
+  if(appointmentForm){
+    appointmentForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      // Simple validation example (phone pattern enforced by HTML too)
+      var phone = document.getElementById('phone').value || '';
+      if(!phone.match(/^\d{10}$/)){
+        alert('Please enter a valid 10-digit mobile number.');
+        return;
+      }
+      // Save to localStorage as a simple mock (so user can see it in browser)
+      var appt = {
+        name: document.getElementById('pname').value,
+        phone: phone,
+        service: document.getElementById('service').value,
+        date: document.getElementById('date').value,
+        timestamp: Date.now()
+      };
+      var arr = JSON.parse(localStorage.getItem('appointments') || '[]');
+      arr.push(appt);
+      localStorage.setItem('appointments', JSON.stringify(arr));
+      // Redirect to thank-you page
+      window.location.href = 'thank-you.html';
+    });
+  }
+});
