@@ -4,59 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us - Aadhaar Sewa Kendra</title>
-<style>
-.contact .form-group { margin-bottom: 15px; }
-.contact input, .contact textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; }
-.whatsapp-btn { display: inline-flex; align-items: center; justify-content: center; background-color: #25D366; color: white; font-size: 17px; font-weight: bold; border: none; border-radius: 10px; padding: 12px 20px; cursor: pointer; transition: 0.3s; }
-.whatsapp-btn i { margin-right: 8px; font-size: 20px; }
-.whatsapp-btn:hover { background-color: #1ebe57; transform: scale(1.05); }
-</style>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section id="contact" class="contact section">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
-    <p>Fill out the form below to send your query directly to our WhatsApp.</p>
-    <form id="contactForm" onsubmit="sendToWhatsApp(event)">
-      <div class="form-group">
-        <label for="name">Full Name <span style="color:red">*</span></label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      </div>
-      <div class="form-group">
-        <label for="mobile">Mobile Number <span style="color:red">*</span></label>
-        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required pattern="[0-9]{10}" maxlength="10">
-      </div>
-      <div class="form-group">
-        <label for="email">Email (optional)</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
-      </div>
-      <div class="form-group">
-        <label for="message">Message <span style="color:red">*</span></label>
-        <textarea id="message" name="message" rows="4" placeholder="Type your message..." required></textarea>
-      </div>
-      <button type="submit" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i> Send via WhatsApp
-      </button>
-    </form>
-  </div>
-</section>
-<script>
-function sendToWhatsApp(event) {
-  event.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const mobile = document.getElementById('mobile').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const whatsappNumber = "917861020303"; // +91 without '+'
-  let text = `New Aadhaar Sewa Kendra Query:%0A`;
-  text += `Name: ${name}%0A`;
-  text += `Mobile: ${mobile}%0A`;
-  if (email) text += `Email: ${email}%0A`;
-  text += `Message: ${message}`;
-  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-  window.location.href = url; // same tab open
-}
-</script>
+<div class="container">
+<h2>Contact Us</h2>
+<p>Call or WhatsApp us directly for any query:</p>
+<a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">WhatsApp Now</a>
+</div>
 </body>
 </html>
