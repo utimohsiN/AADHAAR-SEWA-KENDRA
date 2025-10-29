@@ -1,83 +1,24 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Book Appointment — Aadhaar Sewa Kendra</title>
-  <meta name="description" content="Book an appointment for Aadhaar services">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book Appointment — Aadhaar Sewa Kendra</title>
+<meta name="description" content="Book an appointment for Aadhaar services">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css"></head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Aadhaar Sewa Kendra</a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="appointment.html">Appointment</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container page">
-    <h1>Book Appointment</h1>
-    <p>Fill the form below to book a convenient time slot. After submitting you'll be redirected to a confirmation (thank you) page.</p>
-
-    <form action="thank-you.html" method="get" class="form">
-      <label>Full name
-        <input name="name" type="text" required placeholder="Your full name">
-      </label>
-
-      <label>Mobile number
-        <input name="phone" type="tel" pattern="[6-9][0-9]{9}" required placeholder="10-digit mobile">
-      </label>
-
-      <label>Service required
-        <select name="service" required>
-          <option value="">Select service</option>
-          <option>Enrollment</option>
-          <option>Update/Demographic Change</option>
-          <option>Printing / e-Aadhaar</option>
-          <option>Other</option>
-        </select>
-      </label>
-
-      <label>Preferred date
-        <input name="date" type="date" required>
-      </label>
-
-      <label>Preferred time
-        <input name="time" type="time" required>
-      </label>
-
-      <label>Notes (optional)
-        <textarea name="notes" rows="3" placeholder="Any extra information"></textarea>
-      </label>
-
-      <div class="form-actions">
-        <button class="btn" type="submit">Confirm Appointment</button>
-      </div>
-    </form>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Aadhaar Sewa Kendra</strong><br>
-        Aadhaar Sewa Kendra, Rajnagar Extension, Ghaziabad Uttar Pradesh 201017<br>
-        📞 7861020303 | ✉️ <a href="mailto:utimohsin@gmail.com">utimohsin@gmail.com</a>
-      </div>
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="appointment.html">Appointment</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-    <div class="copyright">© <span id="year3"></span> Aadhaar Sewa Kendra – By Mohsin Saifi</div>
-  </footer>
-
-  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">Aadhaar Sewa Kendra</a><nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="appointment.html">Appointment</a><a href="contact.html">Contact</a></nav></div></header>
+<main class="container page"><h1>Book Appointment</h1><p>Fill the form below to book a convenient time slot. After submitting you'll see a confirmation popup.</p>
+<form id="appointmentForm" class="form">
+<label>Full name<input name="name" type="text" required placeholder="Your full name"></label>
+<label>Mobile number<input name="phone" type="tel" pattern="[6-9][0-9]{9}" required placeholder="10-digit mobile"></label>
+<label>Service required<select name="service" required><option value="">Select service</option><option>Enrollment</option><option>Update/Demographic Change</option><option>Printing / e-Aadhaar</option><option>Other</option></select></label>
+<label>Preferred date<input name="date" type="date" required></label>
+<label>Preferred time<input name="time" type="time" required></label>
+<label>Notes (optional)<textarea name="notes" rows="3" placeholder="Any extra information"></textarea></label>
+<div class="form-actions"><button class="btn" type="submit">Confirm Appointment</button></div>
+</form></main>
+<div id="modal" class="modal" role="dialog" aria-hidden="true"><div class="modal-content"><h2>Thank you!</h2><p>Your appointment request has been received. We will contact you shortly.</p><p>If you need immediate help, message us on WhatsApp: <a href="https://wa.me/917861020303">7861020303</a></p><p><button id="modalClose" class="btn">Close</button></p></div></div>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Aadhaar Sewa Kendra</strong><br>Aadhaar Sewa Kendra, Rajnagar Extension, Ghaziabad Uttar Pradesh 201017<br>📞 7861020303 | ✉️ <a href="mailto:utimohsin@gmail.com">utimohsin@gmail.com</a></div><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div></div><div class="copyright">© <span id="year_app"></span> Aadhaar Sewa Kendra – By Mohsin Saifi</div></footer>
+<script>document.getElementById('year_app').textContent=new Date().getFullYear();const form=document.getElementById('appointmentForm');const modal=document.getElementById('modal');const modalClose=document.getElementById('modalClose');form.addEventListener('submit',function(e){e.preventDefault();modal.setAttribute('aria-hidden','false');modal.style.display='flex';window.scrollTo({top:0,behavior:'smooth'});});modalClose.addEventListener('click',function(){modal.style.display='none';modal.setAttribute('aria-hidden','true');});</script>
 </body>
 </html>
