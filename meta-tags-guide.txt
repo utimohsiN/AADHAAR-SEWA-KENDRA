@@ -1,0 +1,7 @@
+<!-- SEO Meta Tags for Aadhaar Sewa Kendra -->
+<title>Aadhaar Sewa Kendra - By Mohsin Saifi | Official Digital Center</title>
+<meta name="description" content="Your trusted center for Aadhaar and Digital Services including Aadhaar update, PAN, banking, and online form services. Visit Aadhaar Sewa Kendra by Mohsin Saifi.">
+<meta name="keywords" content="Aadhaar, Sewa Kendra, PAN Card, Digital Services, Mohsin Saifi, Aadhaar Update, Appointment, Online Booking, UIDAI, e-Governance">
+<meta name="author" content="Mohsin Saifi">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
