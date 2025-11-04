@@ -1,18 +1,53 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aadhaar Sewa Kendra – By Mohsin Saifi | Your Trusted Aadhaar & Digital Services Centre in Ghaziabad</title>
-<meta name="description" content="Aadhaar Sewa Kendra – Fast, reliable Aadhaar services in Ghaziabad. Book appointment online.">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://utimohsin.github.io/AADHAAR-SEWA-KENDRA/">
-<meta property="og:title" content="Aadhaar Sewa Kendra – By Mohsin Saifi">
-<meta property="og:description" content="Visit our Aadhaar Sewa Kendra for all Aadhaar-related services. Fast and reliable support in Ghaziabad.">
-<meta property="og:image" content="https://utimohsin.github.io/AADHAAR-SEWA-KENDRA/images/og-image.jpg">
-<link rel="stylesheet" href="css/styles.css">
-</head><body>
-  <header class="header"><img src="images/logo-badge.png" style="width:64px;height:64px;border-radius:8px"><div style="margin-left:12px"><div class="brand">Book Appointment</div></div></header>
-  <main class="container"><div class="card"><h2>Appointment Booking</h2><form action="thank-you.html" method="get"><label>Full Name<br><input name="name" required></label><br><br><label>Phone<br><input name="phone" required></label><br><br><label>Service<br><select name="service"><option>Aadhaar Enrollment</option><option>Aadhaar Update</option></select></label><br><br><button type="submit">Book</button></form></div></main>
-  <footer class="footer container">© 2025 Aadhaar Sewa Kendra – By Mohsin Saifi. All Rights Reserved.</footer>
-  <a class="whatsapp-float" href="https://wa.me/917861020303" target="_blank">Chat on WhatsApp</a>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment – Aadhaar Sewa Kendra</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Book Your Appointment</h1>
+      <p class="tagline">Fast • Reliable • Official Aadhaar Services</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="appointment container">
+      <form action="thank-you.html" method="POST">
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+        
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile" required>
+        
+        <label>Date</label>
+        <input type="date" name="date" required>
+        
+        <label>Time</label>
+        <input type="time" name="time" required>
+        
+        <label>Service Type</label>
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option value="Enrollment">Enrollment</option>
+          <option value="Update">Update Details</option>
+          <option value="Print">Print / e-Aadhaar</option>
+        </select>
+        
+        <button type="submit">Book Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Aadhaar Sewa Kendra – By Mohsin Saifi | Fast • Reliable • Official Aadhaar Services</p>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917861020303" class="whatsapp" target="_blank">Chat on WhatsApp</a>
+</body>
+</html>
