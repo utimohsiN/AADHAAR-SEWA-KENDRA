@@ -1,42 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aadhaar Sewa Kendra – By Mohsin Saifi</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aadhaar Sewa Kendra – By Mohsin Saifi</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Aadhaar Sewa Kendra – By Mohsin Saifi</h1>
-      <p class="tagline">Fast • Reliable • Official Aadhaar Services</p>
+<header>
+  <div class="container">
+    <h1>Aadhaar Sewa Kendra – By Mohsin Saifi</h1>
+    <p class="tagline">Fast • Reliable • Official Aadhaar Services</p>
+  </div>
+</header>
+
+<section class="about container">
+  <h2>About Us</h2>
+  <p>🏢 Shop No. 01 & 02, Noor Nagar, Sihani, Near PNB Bank, Ghaziabad, UP – 201017</p>
+  <p>🕘 Open: Mon–Sun, 10:00 AM – 7:00 PM</p>
+</section>
+
+<section class="services container">
+  <h2>Our Services</h2>
+  <div class="accordion">
+    <button class="accordion-button">1. BASIC COMPUTER & OFFICE SERVICES</button>
+    <div class="panel">
+      <p>💻 Ye sab har cyber café me daily chalte kaam hote hain:</p>
+      <ol>
+        <li>Internet browsing / website surfing</li>
+        <li>Email account create / recovery / mail send</li>
+        <li>Typing work (Hindi, English, Urdu, etc.)</li>
+        <li>Document editing (Word, Excel, PowerPoint)</li>
+        <li>File format conversion (Word↔PDF, JPG↔PDF, etc.)</li>
+        <li>Scanning documents & photos</li>
+        <li>Printing (color / black & white / A3, A4, A5 sizes)</li>
+        <li>Photocopy / Xerox</li>
+        <li>Lamination (small ID to A3 size)</li>
+        <li>Spiral / thermal / hard binding</li>
+        <li>Resume / biodata / application typing</li>
+        <li>Visiting card design & print</li>
+        <li>Invitation / greeting card design</li>
+        <li>Pamphlet, banner, flex design & print</li>
+        <li>Logo, stamp, letterhead design</li>
+        <li>Document translation (Hindi-English-Urdu)</li>
+        <li>Offline data entry projects</li>
+        <li>Computer troubleshooting (software install, antivirus etc.)</li>
+        <li>Pen drive / memory card formatting</li>
+        <li>Basic photo correction & background remove</li>
+      </ol>
     </div>
-  </header>
+    <button class="accordion-button">2. GOVERNMENT / CSC / E-DISTRICT SERVICES</button>
+    <div class="panel">
+      <p>📄 Ye sab e-Governance & Digital India ke services hain:</p>
+      <ol>
+        <li>Aadhaar card print / PVC / update / biometric update</li>
+        <li>PAN card apply / correction (NSDL / UTIITSL)</li>
+        <li>Voter ID registration / correction / print</li>
+        <li>Driving license (apply, renewal, status check)</li>
+        <li>Vehicle registration & challan check</li>
+        <li>Passport application & appointment</li>
+        <li>Birth & Death certificate apply / download</li>
+        <li>Caste / income / domicile certificate</li>
+        <li>Character certificate online</li>
+        <li>Ration card new / correction / print</li>
+        <li>E-District / Jan Seva Kendra services</li>
+        <li>Police verification / tenant verification</li>
+        <li>Labour card registration</li>
+        <li>E-Shram card apply / print</li>
+        <li>Ayushman Bharat card apply / print</li>
+        <li>PM Kisan Yojana registration / correction</li>
+        <li>Old age / widow / disability pension form</li>
+        <li>Kisan Credit Card apply</li>
+        <li>Samagra ID / Parivar Pehchan Patra / Bhamashah</li>
+        <li>Digital locker (DigiLocker) account creation</li>
+        <li>CSC VLE registration / portal login help</li>
+        <li>Birth / death registration through government site</li>
+        <li>PM Awas / Ujjwala / Scholarship / etc. online form</li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-  <main>
-    <section class="services container">
-      <div class="card">
-        <h2>Enrollment</h2>
-        <p>New Aadhaar Enrollment Services</p>
-      </div>
-      <div class="card">
-        <h2>Update Details</h2>
-        <p>Update Name, Address, Mobile Number, Email, etc.</p>
-      </div>
-      <div class="card">
-        <h2>Print & Download</h2>
-        <p>Print Aadhaar or Download e-Aadhaar</p>
-      </div>
-    </section>
-  </main>
+<footer>
+  <div class="footer-social">
+    <a href="https://instagram.com/its_cyberhacker_mohsin_saifi" target="_blank">Instagram</a> |
+    <a href="https://www.facebook.com/SaifiProfessionalServices/" target="_blank">Facebook</a>
+  </div>
+  <p>© 2025 Aadhaar Sewa Kendra – By Mohsin Saifi | Fast • Reliable • Official Aadhaar Services</p>
+</footer>
 
-  <footer>
-    <p>© 2025 Aadhaar Sewa Kendra – By Mohsin Saifi | Fast • Reliable • Official Aadhaar Services</p>
-  </footer>
+<a href="https://wa.me/917861020303" class="whatsapp" target="_blank">Chat on WhatsApp</a>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/917861020303" class="whatsapp" target="_blank">Chat on WhatsApp</a>
+<script>
+var acc = document.getElementsByClassName("accordion-button");
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") { panel.style.display = "none"; }
+    else { panel.style.display = "block"; }
+  });
+}
+</script>
+
 </body>
 </html>
